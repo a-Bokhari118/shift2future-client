@@ -12,7 +12,7 @@ const Header = () => {
             nonumy eirmod tempor invidunt ut labore et dolore magna.
           </p>
           <div className=" mt-10">
-            <a className="" href="#0">
+            <a className="border-b-2 border-[#E5E11b] text-3xl " href="#0">
               Get Started
             </a>
           </div>

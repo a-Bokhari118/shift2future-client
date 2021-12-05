@@ -21,3 +21,23 @@
 .custom-shape-divider-bottom-1638633621 .shape-fill {
   fill: #f4f4f4;
 }
+
+.wave2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 126px;
+}
+
+.wave2 .shape-fill {
+  fill: #000;
+}

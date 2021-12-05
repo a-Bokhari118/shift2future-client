@@ -1,29 +1,55 @@
+import { FaCheck, FaFileSignature, FaPhoneAlt } from 'react-icons/fa';
 const Process = () => {
+  const data = [
+    {
+      icon: <FaFileSignature />,
+      text: 'Raclette Blueberry Nextious Level',
+      desc: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbin microdosing tousled waistcoat',
+    },
+    {
+      icon: <FaPhoneAlt />,
+      text: 'Raclette Blueberry ',
+      desc: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbin microdosing tousled waistcoat',
+    },
+    {
+      icon: <FaCheck />,
+      text: ' Nextious Level',
+      desc: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbin microdosing tousled waistcoat',
+    },
+  ];
   return (
-    <section className=" mt-24  p-5 bg-[#F4F4F4] z-20">
-      <div className="container mx-auto flex flex-col items-center justify-center">
-        <h1 className="text-6xl text-center font-extrabold mb-5 text-gray-500 border-b-4  border-[#E5E11B] border-dashed border-opacity-70">
+    <section className=" mt-24  p-5 bg-[#F4F4F4] z-20 relative">
+      <div className="container mx-auto flex flex-col items-center justify-center mb-20">
+        <h1 className="text-6xl text-center font-extrabold mb-5 text-gray-500 ">
           Work Progress
         </h1>
-        <p className="text-xl">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
-          aperiam cumque ea minus aliquam sapiente quasi odio, animi at earum
-          reprehenderit, eaque minima sit soluta quibusdam maiores doloremque
-          ipsam ipsum tempore rerum nesciunt doloribus. Voluptatum sequi
-          officiis eius at assumenda dolores veritatis placeat libero porro ut
-          ab laborum fugiat, odit harum adipisci itaque nesciunt asperiores?
-          Enim tenetur omnis culpa quidem exercitationem, excepturi maxime
-          adipisci sit cumque fugit. Aperiam quos minus consequuntur obcaecati
-          nulla libero itaque ut maiores fugiat! Dignissimos totam autem quae,
-          minus, quisquam culpa iure optio accusamus alias vero, provident ipsam
-          possimus doloribus assumenda soluta tenetur. Asperiores aperiam
-          accusamus fugiat minima facilis adipisci nulla sit exercitationem
-          beatae ab. Expedita sapiente explicabo, nihil voluptates officia ipsa
-          porro saepe molestiae quaerat ducimus alias maxime fugit ex earum
-          fugiat incidunt possimus commodi voluptas ullam. Odio fuga, porro quas
-          optio sint similique quo obcaecati illo ad nam voluptatum quis
-          voluptate ipsa reiciendis ea. nice
-        </p>
+
+        <div class="flex flex-wrap m-4">
+          {data?.map((item, index) => (
+            <div class="p-4 lg:w-1/3" key={index}>
+              <div class="h-full  bg-opacity-75 px-8 pt-16 pb-12 md:pb-28 rounded-lg overflow-hidden text-center relative flex items-center flex-col space-y-4">
+                <div class="text-5xl md:text-6xl mb-3">{item.icon}</div>
+                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                  {item.text}
+                </h1>
+                <p class="leading-relaxed text-gray-600">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="wave2 ">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
       </div>
     </section>
   );
