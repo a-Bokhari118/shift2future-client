@@ -76,12 +76,12 @@ const Navbar = () => {
                 Blog
               </a>
             </li>
-            <li>
+            <li className="flex items-center justify-center">
               <a
-                className="md:p-4 py-2 block hover:text-gray-400 text-gray-500"
+                className="md:px-4 py-1 block bg-[#E5E11B] text-gray-800 rounded"
                 href="#"
               >
-                Sign Up
+                عربي
               </a>
             </li>
           </ul>
