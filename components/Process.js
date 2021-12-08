@@ -24,15 +24,15 @@ const Process = () => {
           Work Progress
         </h1>
 
-        <div class="flex flex-wrap m-4">
+        <div className="flex flex-wrap m-4">
           {data?.map((item, index) => (
-            <div class="p-4 lg:w-1/3" key={index}>
-              <div class="h-full  bg-opacity-75 px-8 pt-16 pb-12 md:pb-28 rounded-lg overflow-hidden text-center relative flex items-center flex-col space-y-4">
-                <div class="text-5xl md:text-6xl mb-3">{item.icon}</div>
-                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+            <div className="p-4 lg:w-1/3" key={index}>
+              <div className="h-full  bg-opacity-75 px-8 pt-16 pb-12 md:pb-28 rounded-lg overflow-hidden text-center relative flex items-center flex-col space-y-4">
+                <div className="text-5xl md:text-6xl mb-3">{item.icon}</div>
+                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   {item.text}
                 </h1>
-                <p class="leading-relaxed text-gray-600">{item.desc}</p>
+                <p className="leading-relaxed text-gray-600">{item.desc}</p>
               </div>
             </div>
           ))}

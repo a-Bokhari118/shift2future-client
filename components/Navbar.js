@@ -78,7 +78,7 @@ const Navbar = () => {
             </li>
             <li className="flex items-center justify-center">
               <a
-                className="md:px-4 py-1 block bg-[#E5E11B] text-gray-800 rounded"
+                className="md:px-4 py-1 block bg-mainColor text-gray-800 rounded"
                 href="#"
               >
                 عربي

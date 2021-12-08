@@ -4,7 +4,7 @@ const Header = () => {
       <div className="flex flex-col md:flex-row items-center container mx-auto">
         <div className="text-white lg:pt-0 w-full ">
           <h2 className=" text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-extrabold uppercase transform">
-            <span className="text-[#E5E11B] ">SHIFT2FUTURE</span> A Place where
+            <span className="text-mainColor ">SHIFT2FUTURE</span> A Place where
             you can be in advance{' '}
           </h2>
           <p className="mt-3 lg:mr-8">
@@ -12,7 +12,7 @@ const Header = () => {
             nonumy eirmod tempor invidunt ut labore et dolore magna.
           </p>
           <div className=" mt-10">
-            <a className="border-b-2 border-[#E5E11b] text-3xl " href="#0">
+            <a className="border-b-2 border-mainColor text-3xl " href="#0">
               Get Started
             </a>
           </div>
