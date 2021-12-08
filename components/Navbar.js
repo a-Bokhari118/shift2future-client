@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <section className="bg-[#121212] w-full">
+    <section className="bg-sndColor w-full">
       <nav
         className="
         flex flex-wrap
@@ -22,7 +22,7 @@ const Navbar = () => {
             <img
               src="/images/logo.svg"
               alt="shift2future logo"
-              className="w-44 py-2"
+              className="w-24 md:w-28  py-2 "
             />
           </a>
         </div>
