@@ -1,6 +1,7 @@
 import Header from '@components/Header';
 import Process from '@components/Process';
-import WhyUs from 'components/WhyUs';
+import Services from '@components/Servcies';
+import WhyUs from '@components/WhyUs';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Header />
         <Process />
         <WhyUs />
+        <Services />
       </div>
     </>
   );
