@@ -5,6 +5,7 @@ import WhyUs from '@components/WhyUs';
 import Gallery from '@components/Gallery';
 import FAQ from '@components/FAQ';
 import OurTeam from '@components/OurTeam';
+import ContactUs from '@components/ContactUs';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Gallery />
         <FAQ />
         <OurTeam />
+        <ContactUs />
       </div>
     </>
   );
