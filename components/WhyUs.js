@@ -4,7 +4,7 @@ import { FaCheck } from 'react-icons/fa';
 const WhyUs = () => {
   return (
     <section className="relative text-gray-600 body-font  ">
-      <div className="container mx-auto px-5 py-24 flex flex-col lg:flex-row pt-10">
+      <div className="container mx-auto px-5 py-24 flex flex-col lg:flex-row pt-10 pb-36">
         <div className=" order-1  lg:w-1/2 w-full mb-10  min-h-full  lg:mb-0 rounded-lg overflow-hidden ">
           <img alt="feature" src="/images/why.svg" className="object-cover" />
         </div>
@@ -36,7 +36,7 @@ const WhyUs = () => {
         </div>
       </div>
 
-      <div className="custom-shape-divider-bottom-1638633621 pt-28">
+      <div className="custom-shape-divider-bottom-1638633621 pt-28 ">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
