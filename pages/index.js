@@ -4,6 +4,7 @@ import Services from '@components/Servcies';
 import WhyUs from '@components/WhyUs';
 import Gallery from '@components/Gallery';
 import FAQ from '@components/FAQ';
+import OurTeam from '@components/OurTeam';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Services />
         <Gallery />
         <FAQ />
+        <OurTeam />
       </div>
     </>
   );
