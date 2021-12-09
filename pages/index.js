@@ -3,6 +3,7 @@ import Process from '@components/Process';
 import Services from '@components/Servcies';
 import WhyUs from '@components/WhyUs';
 import Gallery from '@components/Gallery';
+import FAQ from '@components/FAQ';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <WhyUs />
         <Services />
         <Gallery />
+        <FAQ />
       </div>
     </>
   );
