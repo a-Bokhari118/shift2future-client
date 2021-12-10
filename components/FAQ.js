@@ -5,7 +5,7 @@ const FAQ = () => {
         <h1 className="text-3xl md:text-5xl lg:text-6xl text-center font-extrabold mb-5 text-gray-500 ">
           FAQ
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:mx-40 mx-4 mt-20 mb-40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  mx-4 mt-20 mb-40">
           <div className="text-gray-800  bg-gray-100  rounded-md p-4">
             <h2 className="text-md font-extrabold">
               What does Lifetime Access exactly mean?

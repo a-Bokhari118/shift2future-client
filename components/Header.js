@@ -7,7 +7,7 @@ const Header = () => {
             <span className="text-mainColor ">SHIFT2FUTURE</span> A Place where
             you can be in advance{' '}
           </h2>
-          <p className="mt-3 lg:mr-8">
+          <p className="mt-3 lg:mr-8 ">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna.
           </p>

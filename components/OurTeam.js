@@ -57,14 +57,16 @@ const OurTeam = () => {
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt={item.name}
-                  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                  className="shrink-0 rounded-lg w-52 h-52 object-cover object-center mb-4 aspect-[2/3] "
                   src={item.img}
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-white">
                     Alper Kamu
                   </h2>
-                  <h3 className="text-gray-500 mb-3">{item.job}</h3>
+                  <h3 className="text-gray-500 mb-3 md:text-sm xl:text-base">
+                    {item.job}
+                  </h3>
 
                   <span className="inline-flex">
                     <a className="text-gray-500">
