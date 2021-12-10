@@ -1,22 +1,10 @@
+import { useState } from 'react';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(true);
   return (
-    <section className="bg-sndColor w-full">
-      <nav
-        className="
-        flex flex-wrap
-        container
-        mx-auto
-        items-center
-        justify-between
-        w-full
-        
-        py-4
-        md:py-0
-        px-4
-        text-lg text-gray-700
-        
-      "
-      >
+    <section className="bg-sndColor w-full relative">
+      <nav className="flex flex-wrap container mx-auto items-center justify-between w-full  py-4 md:py-0 px-4 text-lg text-gray-700 ">
         <div>
           <a href="#">
             <img
@@ -27,35 +15,15 @@ const Navbar = () => {
           </a>
         </div>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="menu-button"
-          className="h-6 w-6 cursor-pointer md:hidden block"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-
         <div
-          className="hidden w-full md:flex md:items-center md:w-auto"
-          id="menu"
+          className="h-6 w-6 cursor-pointer md:hidden block z-20"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <ul
-            className="
-            pt-4
-            text-base 
-            text-white
-            md:flex
-            md:justify-between 
-            md:pt-0"
-          >
+          {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+        </div>
+
+        <div className="hidden w-full md:flex md:items-center md:w-auto">
+          <ul className="pt-4 text-base text-white md:flex md:justify-between md:pt-0">
             <li>
               <a className="md:p-4 py-2 block hover:text-gray-400" href="#">
                 Features
@@ -79,6 +47,45 @@ const Navbar = () => {
             <li className="flex items-center justify-center">
               <a
                 className="md:px-4 py-1 block bg-mainColor text-gray-800 rounded"
+                href="#"
+              >
+                عربي
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* mobile menu */}
+
+        <div className="md:hidden absolute right-0 top-0 z-10 overflow-hidden">
+          <ul
+            className={`pt-24 text-base text-sndColor flex flex-col w-44 bg-mainColor h-screen transform transition duration-300 translate-x-full ${
+              isOpen && 'translate-x-0'
+            }`}
+          >
+            <li>
+              <a className="p-4 py-2 block hover:text-gray-400" href="#">
+                Features
+              </a>
+            </li>
+            <li>
+              <a className="p-4 py-2 block hover:text-gray-400" href="#">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a className="p-4 py-2 block hover:text-gray-400" href="#">
+                Customers
+              </a>
+            </li>
+            <li>
+              <a className="p-4 py-2 block hover:text-gray-400" href="#">
+                Blog
+              </a>
+            </li>
+            <li className="flex  mb-4">
+              <a
+                className="px-4 py-1 block bg-mainColor text-gray-800 rounded"
                 href="#"
               >
                 عربي
