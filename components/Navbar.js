@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [navBar, setNavBar] = useState('');
+
+  useEffect(() => {
+    document.addEventListener('scroll', () => {
+      const backgroundcolor =
+        window.scrollY > 100 ? 'border-b border-mainColor' : '';
+
+      setNavBar(backgroundcolor);
+    });
+  }, []);
   return (
-    <section className="bg-sndColor/90 w-full  border-b border-mainColor sticky top-0 z-40">
+    <section
+      className={`bg-sndColor/90 w-full  sticky top-0 z-40 ${navBar} transition duration-300`}
+    >
       <nav className="flex flex-wrap container mx-auto items-center justify-between w-full  py-4 md:py-0 px-4 text-lg text-gray-700 min-h-[10vh] ">
         <div>
           <a href="#">
