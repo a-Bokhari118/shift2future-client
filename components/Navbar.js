@@ -3,7 +3,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
-    <section className="bg-sndColor w-full relative">
+    <section className="bg-sndColor w-full relative ">
       <nav className="flex flex-wrap container mx-auto items-center justify-between w-full  py-4 md:py-0 px-4 text-lg text-gray-700 ">
         <div>
           <a href="#">
@@ -57,12 +57,15 @@ const Navbar = () => {
 
         {/* mobile menu */}
 
-        <div className="md:hidden absolute right-0 top-0 z-10 overflow-hidden w-full ">
+        <div className="md:hidden absolute right-0 top-0 z-10 overflow-hidden w-full h-[50vh]">
           <ul
-            className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full transform transition duration-300 translate-x-full ${
-              isOpen && 'translate-x-0'
+            className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full transform transition duration-300 translate-y-full ${
+              isOpen && 'translate-y-0'
             }`}
           >
+            <h3 className="text-2xl uppercase text-gray-900 mb-2">
+              Shift2future
+            </h3>
             <li>
               <a className="p-4 py-2 block hover:text-gray-400" href="#">
                 Features
