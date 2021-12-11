@@ -18,7 +18,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="">
+        <div className="w-full">
           <div>
             <img src="/images/header-image.svg" alt="Header Image" />
           </div>

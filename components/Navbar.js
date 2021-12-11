@@ -57,9 +57,9 @@ const Navbar = () => {
 
         {/* mobile menu */}
 
-        <div className="md:hidden absolute right-0 top-0 z-10 overflow-hidden">
+        <div className="md:hidden absolute right-0 top-0 z-10 overflow-hidden w-full ">
           <ul
-            className={`pt-24 text-base text-sndColor flex flex-col w-44 bg-mainColor h-screen transform transition duration-300 translate-x-full ${
+            className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full transform transition duration-300 translate-x-full ${
               isOpen && 'translate-x-0'
             }`}
           >
