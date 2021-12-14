@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [navBar, setNavBar] = useState('');
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   }, []);
   return (
     <section
-      className={`bg-sndColor/90 w-full  sticky top-0 z-40 ${navBar} transition duration-300`}
+      className={`bg-sndColor/90 w-full z-30 sticky top-0  ${navBar} transition duration-300 `}
     >
       <nav className="flex flex-wrap container mx-auto items-center justify-between w-full  py-4 md:py-0 px-4 text-lg text-gray-700 min-h-[10vh] ">
         <div>
@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className="h-6 w-6 cursor-pointer md:hidden block z-20"
+          className="h-6 w-6 cursor-pointer md:hidden block z-40"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -69,10 +69,14 @@ const Navbar = () => {
 
         {/* mobile menu */}
 
-        <div className="md:hidden absolute right-0 top-0 z-10 overflow-hidden w-full h-[50vh]">
+        <div
+          className={`md:hidden absolute right-0 top-0 overflow-hidden w-full h-[50vh] transform transition duration-300 ${
+            isOpen ? 'block' : 'hidden '
+          }`}
+        >
           <ul
-            className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full transform transition duration-300 translate-y-full ${
-              isOpen && 'translate-y-0'
+            className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full opacity-0 transform transition duration-300 ${
+              isOpen ? 'opacity-100' : ''
             }`}
           >
             <h3 className="text-2xl uppercase text-gray-900 mb-2">

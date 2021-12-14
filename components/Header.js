@@ -1,9 +1,9 @@
 const Header = () => {
   return (
-    <header className="px-4 relative">
-      <div className="flex flex-col md:flex-row items-center container mx-auto">
+    <header className="px-4 relative z-20 ">
+      <div className="flex flex-col md:flex-row items-center container mx-auto ">
         <div className="text-white lg:pt-0 w-full ">
-          <h2 className=" text-2xl sm:text-3xl md:text-2xl lg:text-4xl xl:text-5xl font-extrabold uppercase transform">
+          <h2 className=" text-3xl sm:text-3xl md:text-2xl lg:text-4xl xl:text-5xl font-extrabold uppercase transform">
             <span className="text-mainColor ">SHIFT2FUTURE</span> A Place where
             you can be in advance{' '}
           </h2>
