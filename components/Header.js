@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 const Header = () => {
   return (
-    <header className="px-4 relative z-20 ">
+    <header className="px-4 relative z-20 py-16">
       <div className="flex flex-col md:flex-row items-center container mx-auto ">
         <div className="text-white lg:pt-0 w-full ">
           <h2 className=" text-3xl sm:text-3xl md:text-2xl lg:text-4xl xl:text-5xl font-extrabold uppercase transform">
-            <span className="text-mainColor ">SHIFT2FUTURE</span> A Place where
+            <span className="text-mainColor">SHIFT2FUTURE</span> A Place where
             you can be in advance{' '}
           </h2>
           <p className="mt-3 lg:mr-8 ">
@@ -18,14 +20,16 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="w-full">
-          <div>
-            <img src="/images/header-image.svg" alt="Header Image" />
-          </div>
+        <div className="relative w-full h-[50vh] ">
+          <Image
+            src="/images/header-image.svg"
+            alt="Header Image"
+            layout="fill"
+          />
         </div>
       </div>
 
-      <div className="custom-shape-divider-bottom-1638633621 pt-28">
+      <div className="custom-shape-divider-bottom-1638633621">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

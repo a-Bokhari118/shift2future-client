@@ -16,7 +16,7 @@ const Navbar = () => {
     <section
       className={`bg-sndColor/90 w-full z-30 sticky top-0  ${navBar} transition duration-300 `}
     >
-      <nav className="flex flex-wrap container mx-auto items-center justify-between w-full  py-4 md:py-0 px-4 text-lg text-gray-700 min-h-[10vh] ">
+      <nav className="relative flex flex-wrap container mx-auto items-center justify-between w-full  py-4 md:py-0 px-4 text-lg text-gray-700 min-h-[10vh] ">
         <div>
           <a href="#">
             <img
@@ -70,14 +70,12 @@ const Navbar = () => {
         {/* mobile menu */}
 
         <div
-          className={`md:hidden absolute right-0 top-0 overflow-hidden w-full h-[50vh] transform transition duration-300 ${
-            isOpen ? 'block' : 'hidden '
+          className={`md:hidden absolute right-0 top-[10vh] overflow-hidden w-full h-[50vh] transform transition duration-300 ${
+            isOpen ? 'block' : 'hidden'
           }`}
         >
           <ul
-            className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full opacity-0 transform transition duration-300 ${
-              isOpen ? 'opacity-100' : ''
-            }`}
+            className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full transform transition duration-300 `}
           >
             <h3 className="text-2xl uppercase text-gray-900 mb-2">
               Shift2future
