@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const GamingHeader = () => {
   return (
     <header
@@ -21,10 +23,8 @@ const GamingHeader = () => {
           </div>
         </div>
 
-        <div className="w-full lg:w-3/4">
-          <div>
-            <img src="/images/gaming.svg" alt="Header Image" />
-          </div>
+        <div className="relative w-full h-[50vh] ">
+          <Image src="/images/gaming.svg" alt="Header Image" layout="fill" />
         </div>
       </div>
     </header>
