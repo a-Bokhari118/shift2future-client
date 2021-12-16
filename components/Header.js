@@ -1,30 +1,74 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+  let router = useRouter();
+  let greeting =
+    router.locale === 'en-US'
+      ? 'A Place where you can be in advance'
+      : router.locale === 'ar'
+      ? 'اهلا وسهلا بكم في '
+      : '';
+
+  let greeting2 = 'Shift2Future';
+  let greeting3 = 'شفت تو فيوتشير';
+
+  let des =
+    router.locale === 'en-US'
+      ? 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna.'
+      : router.locale === 'ar'
+      ? 'من عام 2020 وفريقنا الرهيب يشتغل بشغف وحب عشان تقدم الافضل والاحسن لخدمة عملائنا. ونعرض خدماتنا على حسب رغباتكم واحتياجاتكم المطلوبة'
+      : '';
+
+  let greeting4 =
+    router.locale === 'en-US'
+      ? 'Order Now'
+      : router.locale === 'ar'
+      ? 'اطلب الان'
+      : '';
+
   return (
     <header className="px-4 relative z-20 py-16">
       <div className="flex flex-col md:flex-row items-center container mx-auto ">
-        <div className="text-white lg:pt-0 w-full ">
-          <h2 className=" text-3xl sm:text-3xl md:text-2xl lg:text-4xl xl:text-5xl font-extrabold uppercase transform">
-            <span className="text-mainColor">SHIFT2FUTURE</span> A Place where
-            you can be in advance{' '}
-          </h2>
-          <p className="mt-3 lg:mr-8 ">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna.
-          </p>
+        <div
+          className={`text-white lg:pt-0 w-full ${
+            router.locale === 'en-US'
+              ? 'md:order-1 text-left'
+              : 'md:order-2 text-right'
+          }`}
+        >
+          {router.locale === 'en-US' ? (
+            <h2 className=" text-3xl sm:text-3xl md:text-2xl lg:text-4xl xl:text-5xl font-extrabold uppercase transform">
+              <span className="text-mainColor">{greeting2}</span> {greeting}
+            </h2>
+          ) : router.locale === 'ar' ? (
+            <h2 className=" text-3xl sm:text-3xl md:text-2xl lg:text-4xl xl:text-6xl font-extrabold uppercase transform">
+              {greeting} <span className="text-mainColor">{greeting3}</span>
+            </h2>
+          ) : (
+            ''
+          )}
+
+          <p className="mt-3">{des}</p>
           <div className=" mt-10">
             <a className="border-b-2 border-mainColor text-3xl " href="#0">
-              Get Started
+              {greeting4}
             </a>
           </div>
         </div>
 
-        <div className="relative w-full h-[50vh] ">
+        <div
+          className={`relative w-full  ${
+            router.locale === 'en-US' ? 'md:order-2' : 'md:order-1'
+          }`}
+        >
           <Image
             src="/images/header-image.svg"
             alt="Header Image"
-            layout="fill"
+            layout="responsive"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover object-center block"
           />
         </div>
       </div>

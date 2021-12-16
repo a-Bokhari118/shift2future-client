@@ -11,4 +11,8 @@ module.exports = {
       'images.unsplash.com',
     ],
   },
+  i18n: {
+    locales: ['en-US', 'ar'],
+    defaultLocale: 'en-US',
+  },
 };
