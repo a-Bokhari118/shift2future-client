@@ -1,10 +1,13 @@
+import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [navBar, setNavBar] = useState('');
+  const { t, lang } = useTranslation('navbar');
 
   let router = useRouter();
 
@@ -21,7 +24,7 @@ const Navbar = () => {
       className={`bg-sndColor/90 w-full z-30 sticky top-0  ${navBar} transition duration-300 `}
     >
       <nav className="relative flex flex-wrap container mx-auto items-center justify-between w-full  py-4 md:py-0 px-4 text-lg text-gray-700 min-h-[10vh] ">
-        <div className={`${router.locale === 'en-US' ? 'order-1' : 'order-2'}`}>
+        <div className={`${lang === 'en' ? 'order-1' : 'order-2'}`}>
           <a href="#">
             <img
               src="/images/logo.svg"
@@ -40,44 +43,64 @@ const Navbar = () => {
 
         <div
           className={`${
-            router.locale === 'en-US' ? 'order-2' : 'order-1'
+            lang === 'en' ? 'order-2' : 'order-1'
           }  hidden w-full md:flex md:items-center md:w-auto`}
         >
           <ul className="pt-4 text-base text-white md:flex md:justify-between md:pt-0">
-            <li className={`order-2`}>
-              <a className="md:p-4 py-2 block hover:text-gray-400" href="#">
-                Features
+            <li className={`${lang === 'en' ? 'order-2' : 'order-6'} `}>
+              <a
+                className="md:p-4 py-2 block hover:text-mainColor uppercase"
+                href="#"
+              >
+                {t('servcies')}
               </a>
             </li>
-            <li className="order-3">
-              <a className="md:p-4 py-2 block hover:text-gray-400" href="#">
-                Pricing
+            <li className={`${lang === 'en' ? 'order-2' : 'order-5'} `}>
+              <a
+                className="md:p-4 py-2 block hover:text-mainColor uppercase"
+                href="#"
+              >
+                {t('workprog')}
               </a>
             </li>
-            <li className="order-4">
-              <a className="md:p-4 py-2 block hover:text-gray-400" href="#">
-                Customers
+            <li className={`${lang === 'en' ? 'order-2' : 'order-4'} `}>
+              <a
+                className="md:p-4 py-2 block hover:text-mainColor uppercase"
+                href="#"
+              >
+                {t('whyus')}
               </a>
             </li>
-            <li className="order-5">
-              <a className="md:p-4 py-2 block hover:text-gray-400" href="#">
-                Blog
+            <li className={`${lang === 'en' ? 'order-2' : 'order-3'} `}>
+              <a
+                className="md:p-4 py-2 block hover:text-mainColor uppercase"
+                href="#"
+              >
+                {t('works')}
+              </a>
+            </li>
+            <li className="order-2">
+              <a
+                className="md:p-4 py-2 block hover:text-mainColor uppercase"
+                href="#"
+              >
+                {t('contact')}
               </a>
             </li>
             <li
               className={`flex items-center justify-center ${
-                router.locale === 'en-US' ? 'order-5' : 'order-1'
+                lang === 'en' ? 'order-7' : 'order-1'
               }`}
             >
-              {router.locale === 'en-US' ? (
+              {lang === 'en' ? (
                 <a className="md:px-4 py-1 block bg-mainColor text-gray-800 rounded">
                   <Link href={router.asPath} locale={'ar'}>
                     عربي
                   </Link>
                 </a>
-              ) : router.locale === 'ar' ? (
+              ) : lang === 'ar' ? (
                 <a className="md:px-4 py-1 block bg-mainColor text-gray-800 rounded">
-                  <Link href={router.asPath} locale={'en-US'}>
+                  <Link href={router.asPath} locale={'en'}>
                     English
                   </Link>
                 </a>

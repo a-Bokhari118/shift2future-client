@@ -1,5 +1,5 @@
-module.exports = {
-  reactStrictMode: true,
+const nextTranslate = require('next-translate');
+module.exports = nextTranslate({
   images: {
     domains: [
       'www.gamingdebugged.com',
@@ -11,8 +11,4 @@ module.exports = {
       'images.unsplash.com',
     ],
   },
-  i18n: {
-    locales: ['en-US', 'ar'],
-    defaultLocale: 'en-US',
-  },
-};
+});
