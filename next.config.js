@@ -8,6 +8,7 @@ module.exports = {
       'fiverr-res.cloudinary.com',
       'miro.medium.com',
       'www.deephouseamsterdam.com',
+      'images.unsplash.com',
     ],
   },
 };

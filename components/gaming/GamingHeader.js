@@ -18,7 +18,7 @@ const GamingHeader = () => {
           </p>
           <div className=" mt-10">
             <a className="border-b-2 border-mainColor text-3xl " href="#0">
-              Order Now
+              Book Now
             </a>
           </div>
         </div>
