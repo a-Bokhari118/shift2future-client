@@ -35,7 +35,9 @@ const Navbar = () => {
         </div>
 
         <div
-          className="h-6 w-6 cursor-pointer md:hidden block z-40"
+          className={`${
+            lang === 'en' ? 'order-2' : 'order-1'
+          } h-6 w-6 cursor-pointer md:hidden block z-40`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -122,35 +124,53 @@ const Navbar = () => {
             className={`pt-24 text-base text-sndColor flex flex-col items-center bg-mainColor h-full transform transition duration-300 `}
           >
             <h3 className="text-2xl uppercase text-gray-900 mb-2">
-              Shift2future
+              {t('header:name')}
             </h3>
-            <li>
-              <a className="p-4 py-2 block hover:text-gray-400" href="#">
-                Features
+            <li className={`${lang === 'en' ? 'order-2' : 'order-6'} `}>
+              <a className="md:p-4 py-2 block  uppercase" href="#">
+                {t('servcies')}
               </a>
             </li>
-            <li>
-              <a className="p-4 py-2 block hover:text-gray-400" href="#">
-                Pricing
+            <li className={`${lang === 'en' ? 'order-2' : 'order-5'} `}>
+              <a className="md:p-4 py-2 block  uppercase" href="#">
+                {t('workprog')}
               </a>
             </li>
-            <li>
-              <a className="p-4 py-2 block hover:text-gray-400" href="#">
-                Customers
+            <li className={`${lang === 'en' ? 'order-2' : 'order-4'} `}>
+              <a className="md:p-4 py-2 block  uppercase" href="#">
+                {t('whyus')}
               </a>
             </li>
-            <li>
-              <a className="p-4 py-2 block hover:text-gray-400" href="#">
-                Blog
+            <li className={`${lang === 'en' ? 'order-2' : 'order-3'} `}>
+              <a className="md:p-4 py-2 block  uppercase" href="#">
+                {t('works')}
               </a>
             </li>
-            <li className="flex  mb-4">
-              <a
-                className="px-4 py-1 block bg-mainColor text-gray-800 rounded"
-                href="#"
-              >
-                عربي
+            <li className="order-2">
+              <a className="md:p-4 py-2 block  uppercase" href="#">
+                {t('contact')}
               </a>
+            </li>
+            <li
+              className={`flex items-center justify-center ${
+                lang === 'en' ? 'order-7' : 'order-7'
+              }`}
+            >
+              {lang === 'en' ? (
+                <a className="md:px-4 py-1 block bg-mainColor text-gray-800 rounded">
+                  <Link href={router.asPath} locale={'ar'}>
+                    عربي
+                  </Link>
+                </a>
+              ) : lang === 'ar' ? (
+                <a className="md:px-4 py-1 block bg-mainColor text-gray-800 rounded">
+                  <Link href={router.asPath} locale={'en'}>
+                    English
+                  </Link>
+                </a>
+              ) : (
+                ''
+              )}
             </li>
           </ul>
         </div>
