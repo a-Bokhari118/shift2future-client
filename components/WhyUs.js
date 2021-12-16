@@ -4,11 +4,20 @@ import { FaCheck } from 'react-icons/fa';
 const WhyUs = () => {
   return (
     <section className="relative text-gray-600 body-font  ">
-      <div className="container mx-auto px-5 py-24 flex flex-col lg:flex-row pt-10 pb-36">
-        <div className=" order-1  lg:w-1/2 w-full mb-10  min-h-full  lg:mb-0 rounded-lg overflow-hidden ">
-          <img alt="feature" src="/images/why.svg" className="object-cover" />
+      <div className="container mx-auto px-5 py-24 flex flex-col lg:flex-row pt-20 pb-36 items-center ">
+        <div className=" order-1 lg:w-[50%] w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+          <div className="relative w-full h-full">
+            <Image
+              alt="feature"
+              src="/images/why.svg"
+              className="w-full h-full object-cover object-center block"
+              fill="responsive"
+              height={1080}
+              width={1920}
+            />
+          </div>
         </div>
-        <div className=" order-2 flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:px-12 text-left w-full justify-center">
+        <div className=" order-2 flex flex-col flex-wrap lg:py-6 -mb-10  lg:px-12 text-left w-full justify-center lg:w-[50%]">
           <h4 className="text-xl text-mainColor">Why Choose us</h4>
           <h1 className="text-xl lg:text-2xl md:text-xl xl:text-4xl text-white">
             Your Goal is Our Achievement
@@ -36,7 +45,7 @@ const WhyUs = () => {
         </div>
       </div>
 
-      <div className="custom-shape-divider-bottom-1638633621 pt-28 ">
+      <div className="custom-shape-divider-bottom-1638633621  ">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
